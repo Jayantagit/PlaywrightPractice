@@ -15,5 +15,6 @@ let email="TestAutomation"+Math.random(37).toString().substring(2)+"@gmail.com"
   await page.locator("//label[text()='E-mail:']//following-sibling::input").type(email,{delay:100})
   await page.locator("//label[text()='Password:']//following-sibling::input[@name='password']").nth(0).type("jayantam2006",{delay:100}) 
   await page.locator("//label[text()='Confirm Password:']//following-sibling::input[@name='c_password']").type("jayantam2006",{delay:100})   
-  await page.locator("//input[@type='submit' and @value='submit']").click()
+  //await page.locator("//input[@type='submit' and @value='submit']").click()
+  await page.getByRole('button',{name:'submit'}).click()
 });
